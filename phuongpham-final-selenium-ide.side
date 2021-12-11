@@ -1,0 +1,1230 @@
+{
+  "id": "8b54b260-ac7b-4ab4-8fd9-aeb5d19d3d60",
+  "version": "2.0",
+  "name": "Jira008",
+  "url": "https://demoqa.com",
+  "tests": [{
+    "id": "832dc51e-e0fe-4f53-ab65-71a5c2ba66d7",
+    "name": "Scenario 1: Register",
+    "commands": [{
+      "id": "ca727cb4-0516-4ed8-99fb-b6bd304ed14c",
+      "comment": "",
+      "command": "open",
+      "target": "https://demoqa.com/automation-practice-form",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c84948db-0811-4c75-8a0a-bf6f2d053d36",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "828x661",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "edf601b9-dc34-4811-8eef-76cc2c09f652",
+      "comment": "",
+      "command": "store",
+      "target": "Pham",
+      "targets": [],
+      "value": "firstName"
+    }, {
+      "id": "637f8f90-b73c-4324-97fc-59a8d2ffda73",
+      "comment": "",
+      "command": "type",
+      "target": "id=firstName",
+      "targets": [
+        ["id=firstName", "id"],
+        ["css=#firstName", "css:finder"],
+        ["xpath=//input[@id='firstName']", "xpath:attributes"],
+        ["xpath=//div[@id='userName-wrapper']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${firstName}"
+    }, {
+      "id": "c058b320-3347-47a5-8e12-d36e922a4cec",
+      "comment": "",
+      "command": "store",
+      "target": "Phuong",
+      "targets": [],
+      "value": "lastName"
+    }, {
+      "id": "68cf109e-b6de-4c89-ab6a-4e14ae322556",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastName",
+      "targets": [
+        ["id=lastName", "id"],
+        ["css=#lastName", "css:finder"],
+        ["xpath=//input[@id='lastName']", "xpath:attributes"],
+        ["xpath=//div[@id='userName-wrapper']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "${lastName}"
+    }, {
+      "id": "63a1d7f5-8f92-4caf-a219-38ea3ee66e98",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return char = (Math.random() +1).toString(36).substring(2) + \"@gmail.com\"",
+      "targets": [],
+      "value": "userEmail"
+    }, {
+      "id": "1810314c-5f48-490c-a13e-c78de27d4c89",
+      "comment": "",
+      "command": "type",
+      "target": "id=userEmail",
+      "targets": [
+        ["id=userEmail", "id"],
+        ["css=#userEmail", "css:finder"],
+        ["xpath=//input[@id='userEmail']", "xpath:attributes"],
+        ["xpath=//div[@id='userEmail-wrapper']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "${userEmail}"
+    }, {
+      "id": "3d2c2f97-c3d0-4427-a814-2fb492e7508a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 3) +1",
+      "targets": [],
+      "value": "randomRadioBox"
+    }, {
+      "id": "af253911-ce8c-42a3-93ae-b9b29a7f69ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=#genterWrapper input[id=\"gender-radio-${randomRadioBox}\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00978d62-7b83-4f0b-b097-51cf2563b51f",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=#genterWrapper label[for=\"gender-radio-${randomRadioBox}\"]",
+      "targets": [],
+      "value": "genderName"
+    }, {
+      "id": "55be23d0-877e-490e-b1cc-0a352a18ab21",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"0\" + Math.floor(Math.random()*1000000000)",
+      "targets": [],
+      "value": "userNumber"
+    }, {
+      "id": "a4863b60-b73c-43d8-9055-dfc4a3be7b46",
+      "comment": "",
+      "command": "echo",
+      "target": "${userNumber}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c3659ab-8f1f-42aa-b530-0720a2c153f3",
+      "comment": "",
+      "command": "type",
+      "target": "id=userNumber",
+      "targets": [
+        ["id=userNumber", "id"],
+        ["css=#userNumber", "css:finder"],
+        ["xpath=//input[@id='userNumber']", "xpath:attributes"],
+        ["xpath=//div[@id='userNumber-wrapper']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "${userNumber}"
+    }, {
+      "id": "3d490c12-5e99-47dd-a0a3-65cb14da5d12",
+      "comment": "",
+      "command": "click",
+      "target": "id=dateOfBirthInput",
+      "targets": [
+        ["id=dateOfBirthInput", "id"],
+        ["css=#dateOfBirthInput", "css:finder"],
+        ["xpath=//input[@id='dateOfBirthInput']", "xpath:attributes"],
+        ["xpath=//div[@id='dateOfBirth']/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2680c72c-5f22-4fd0-b777-9abf10ea2f20",
+      "comment": "",
+      "command": "click",
+      "target": "css=.react-datepicker__year-select",
+      "targets": [
+        ["css=.react-datepicker__year-select", "css:finder"],
+        ["xpath=//div[@id='dateOfBirth']/div[2]/div[2]/div/div/div[2]/div/div[2]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//div[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b4c7291-9515-4351-8f30-c87147820c3e",
+      "comment": "",
+      "command": "select",
+      "target": "css=.react-datepicker__year-select",
+      "targets": [],
+      "value": "label=1993"
+    }, {
+      "id": "b8f1f92f-ac6e-4ce0-9290-570c25902c16",
+      "comment": "",
+      "command": "click",
+      "target": "css=.react-datepicker__month-select",
+      "targets": [
+        ["css=.react-datepicker__month-select", "css:finder"],
+        ["xpath=//div[@id='dateOfBirth']/div[2]/div[2]/div/div/div[2]/div/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "01b9a0ea-d6f2-4647-a1c7-76a0c2cea120",
+      "comment": "",
+      "command": "select",
+      "target": "css=.react-datepicker__month-select",
+      "targets": [],
+      "value": "label=April"
+    }, {
+      "id": "dfd2ccc7-85e6-4f50-9062-e5234c939c89",
+      "comment": "",
+      "command": "click",
+      "target": "css=.react-datepicker__day--014",
+      "targets": [
+        ["css=.react-datepicker__day--014", "css:finder"],
+        ["xpath=//div[@id='dateOfBirth']/div[2]/div[2]/div/div/div[2]/div[2]/div[3]/div[4]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[3]/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "73c87d85-ffe0-4da0-8125-8f3000c0e398",
+      "comment": "",
+      "command": "store",
+      "target": "Math",
+      "targets": [],
+      "value": "subjectsInput"
+    }, {
+      "id": "b7311544-0ee8-4d85-9a25-195766797909",
+      "comment": "",
+      "command": "type",
+      "target": "css=#subjectsWrapper input[id=\"subjectsInput\"]",
+      "targets": [],
+      "value": "${subjectsInput}"
+    }, {
+      "id": "83fbb943-99b7-4ed8-b44c-b860299528d0",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=div[id=\"react-select-2-option-0\"]",
+      "targets": [],
+      "value": "subjectsName"
+    }, {
+      "id": "8e559b49-fcf0-443b-9cd4-512779180578",
+      "comment": "",
+      "command": "click",
+      "target": "css=div[id=\"react-select-2-option-0\"]",
+      "targets": [
+        ["css=.custom-checkbox:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='hobbiesWrapper']/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[7]/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "132f2b16-9429-46f3-add9-3e6596f83604",
+      "comment": "",
+      "command": "click",
+      "target": "css=#hobbiesWrapper input[id=\"hobbies-checkbox-${randomRadioBox}\"]",
+      "targets": [
+        ["css=.custom-checkbox:nth-child(1) > .custom-control-label", "css:finder"],
+        ["xpath=//div[@id='hobbiesWrapper']/div[2]/div/label", "xpath:idRelative"],
+        ["xpath=//div[7]/div[2]/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Sports')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0cdc92ef-e626-47fb-8728-914b0e7bc0f0",
+      "comment": "",
+      "command": "storeText",
+      "target": "css= #hobbiesWrapper label[for=\"hobbies-checkbox-${randomRadioBox}\"]",
+      "targets": [],
+      "value": "hobbiesName"
+    }, {
+      "id": "15a360d3-05d1-41cb-81f7-4e890e86fe25",
+      "comment": "",
+      "command": "echo",
+      "target": "${hobbiesName}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d2c916a5-080d-4e40-b14c-95a9fd6f5426",
+      "comment": "",
+      "command": "store",
+      "target": "29/32/56 Duong So 5 P.10 Q.04",
+      "targets": [],
+      "value": "userAddress"
+    }, {
+      "id": "4d0f5fc7-ffd1-494c-a932-1dca6be3489e",
+      "comment": "",
+      "command": "type",
+      "target": "id=currentAddress",
+      "targets": [
+        ["id=currentAddress", "id"],
+        ["css=#currentAddress", "css:finder"],
+        ["xpath=//textarea[@id='currentAddress']", "xpath:attributes"],
+        ["xpath=//div[@id='currentAddress-wrapper']/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${userAddress}"
+    }, {
+      "id": "1b91df57-fd07-44c7-aa9a-e2ed8ec1162b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#state div[class*=\"placeholder\"]",
+      "targets": [
+        ["css=.css-1gtu0rj-indicatorContainer > .css-19bqh2r", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb673ce4-3075-4cce-886c-194720787deb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Math.floor(Math.random() * 4)",
+      "targets": [],
+      "value": "randomOption"
+    }, {
+      "id": "2c3b0ec6-4fd8-4a35-9465-9ed12ba15237",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=#state div[id=\"react-select-3-option-${randomOption}\"]",
+      "targets": [],
+      "value": "stateName"
+    }, {
+      "id": "4f468b40-abd2-4081-945d-42fb9139715e",
+      "comment": "",
+      "command": "click",
+      "target": "css=#state div[id=\"react-select-3-option-${randomOption}\"]",
+      "targets": [
+        ["id=react-select-3-option-1", "id"],
+        ["css=#react-select-3-option-1", "css:finder"],
+        ["xpath=//div[@id='react-select-3-option-1']", "xpath:attributes"],
+        ["xpath=//div[@id='state']/div[2]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8fd7ece9-ab72-4fa3-90ed-789c92021126",
+      "comment": "",
+      "command": "click",
+      "target": "css=#city div[class*=\"placeholder\"]",
+      "targets": [
+        ["css=.css-1wa3eu0-placeholder", "css:finder"],
+        ["xpath=//div[@id='city']/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd19a1e2-4689-4712-a0c2-352bb7f96a01",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=#city div[id=\"react-select-4-option-0\"]",
+      "targets": [],
+      "value": "cityName"
+    }, {
+      "id": "417366dc-6e6b-4d5a-a8a3-617c2ccee250",
+      "comment": "",
+      "command": "click",
+      "target": "css=#city div[id=\"react-select-4-option-0\"]",
+      "targets": [
+        ["id=react-select-4-option-1", "id"],
+        ["css=#react-select-4-option-1", "css:finder"],
+        ["xpath=//div[@id='react-select-4-option-1']", "xpath:attributes"],
+        ["xpath=//div[@id='city']/div[2]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "66fd2e3c-7c36-4212-9aee-18bb20a87acf",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='userForm']/div[11]/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "53bb2479-0bc1-4f92-9855-2c665e02b720",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${firstName} + \" \" + ${lastName}",
+      "targets": [],
+      "value": "fullName"
+    }, {
+      "id": "d911002c-ede9-4a54-acf3-44d0d07bdf14",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@class=\"table-responsive\"]//td[text()=\"${fullName}\"]",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(2)", "css:finder"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Pham Phuong')]", "xpath:innerText"]
+      ],
+      "value": "${fullName}"
+    }, {
+      "id": "92f2beac-f7a5-47b2-b933-0074caa44e5d",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@class=\"table-responsive\"]//td[text()=\"${userEmail}\"]",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(2)", "css:finder"],
+        ["xpath=//tr[2]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'example@gmail.com')]", "xpath:innerText"]
+      ],
+      "value": "${userEmail}"
+    }, {
+      "id": "d06d4e65-1ae0-4979-b90f-fec3b002056f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@class=\"table-responsive\"]//td[text()=\"${genderName}\"]",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(2)", "css:finder"],
+        ["xpath=//tr[3]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Male')]", "xpath:innerText"]
+      ],
+      "value": "${genderName}"
+    }, {
+      "id": "70bb3e0c-1920-4680-ae75-953b136abb08",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@class=\"table-responsive\"]//td[text()=\"${userNumber}\"]",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(2)", "css:finder"],
+        ["xpath=//tr[4]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'0352262714')]", "xpath:innerText"]
+      ],
+      "value": "${userNumber}"
+    }, {
+      "id": "0384baba-fbfb-4a5f-8415-1eecf8f18926",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@class=\"table-responsive\"]//td[text()=\"${subjectsName}\"]",
+      "targets": [
+        ["css=tr:nth-child(6) > td:nth-child(2)", "css:finder"],
+        ["xpath=//tr[6]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Maths')]", "xpath:innerText"]
+      ],
+      "value": "${subjectsName}"
+    }, {
+      "id": "852ea342-bc8c-481c-9f80-16c498c82b08",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@class=\"table-responsive\"]//td[text()=\"${hobbiesName}\"]",
+      "targets": [
+        ["css=tr:nth-child(7) > td:nth-child(2)", "css:finder"],
+        ["xpath=//tr[7]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Sports')]", "xpath:innerText"]
+      ],
+      "value": "${hobbiesName}"
+    }, {
+      "id": "a29831a7-4839-40b5-9f54-6ad9438beca0",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@class=\"table-responsive\"]//td[text()=\"${userAddress}\"]",
+      "targets": [
+        ["css=tr:nth-child(9) > td:nth-child(2)", "css:finder"],
+        ["xpath=//tr[9]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Somwhere')]", "xpath:innerText"]
+      ],
+      "value": "${userAddress}"
+    }, {
+      "id": "bd52db89-24b7-4bd3-b1aa-2aea155788a8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${stateName} + \" \" + ${cityName}",
+      "targets": [],
+      "value": "stateCity"
+    }, {
+      "id": "206de5df-43b3-4893-97f7-e77cdccea3eb",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@class=\"table-responsive\"]//td[text()=\"${stateCity}\"]",
+      "targets": [
+        ["css=tr:nth-child(10) > td:nth-child(2)", "css:finder"],
+        ["xpath=//tr[10]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Uttar Pradesh Lucknow')]", "xpath:innerText"]
+      ],
+      "value": "${stateCity}"
+    }, {
+      "id": "a76d330c-76d4-4a04-ad11-e9dc1c00e0b1",
+      "comment": "",
+      "command": "store",
+      "target": "Thanks for submitting the form",
+      "targets": [],
+      "value": "successTitle"
+    }, {
+      "id": "939b0d83-1f2e-4099-93c6-88936ead28f8",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=#example-modal-sizes-title-lg",
+      "targets": [
+        ["id=example-modal-sizes-title-lg", "id"],
+        ["css=#example-modal-sizes-title-lg", "css:finder"],
+        ["xpath=//div[@id='example-modal-sizes-title-lg']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div/div/div", "xpath:position"]
+      ],
+      "value": "${successTitle}"
+    }, {
+      "id": "9ba3bdd4-9bdd-4cab-99b7-d0fe3608ebc5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#closeLargeModal",
+      "targets": [
+        ["id=closeLargeModal", "id"],
+        ["css=#closeLargeModal", "css:finder"],
+        ["xpath=//button[@id='closeLargeModal']", "xpath:attributes"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Close')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "7d484fbf-de7c-4a29-ac7e-cc0988355d44",
+    "name": "Scenario 2: Add Book",
+    "commands": [{
+      "id": "6f66983a-8a07-4d63-81fc-da1f70f8dfd6",
+      "comment": "",
+      "command": "run",
+      "target": "Login Book Store",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53d05570-1bef-4f00-bf2f-145c934ac5b4",
+      "comment": "",
+      "command": "run",
+      "target": "Delete All Book",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f521d0ec-b1f6-433b-a7af-46ee8584f8d0",
+      "comment": "",
+      "command": "open",
+      "target": "https://demoqa.com/books",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4bcca81a-0d95-4b1f-b67e-739213a3611e",
+      "comment": "",
+      "command": "store",
+      "target": "Learning JavaScript Design Patterns",
+      "targets": [],
+      "value": "firstBook"
+    }, {
+      "id": "e4771739-47c1-4ae3-8c10-00c69b0733c9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=${firstBook}",
+      "targets": [
+        ["linkText=Learning JavaScript Design Patterns", "linkText"],
+        ["css=#see-book-Learning\\ JavaScript\\ Design\\ Patterns > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Learning JavaScript Design Patterns')]", "xpath:link"],
+        ["xpath=//span[@id='see-book-Learning JavaScript Design Patterns']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/books?book=9781449331818')]", "xpath:href"],
+        ["xpath=//div[2]/div/div[2]/div/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Learning JavaScript Design Patterns')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2addfca7-55ea-41de-b492-51e5863815ef",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@id='addNewRecordButton' and contains(text(),'Add To Your Collection')]",
+      "targets": [
+        ["css=.text-right > #addNewRecordButton", "css:finder"],
+        ["xpath=(//button[@id='addNewRecordButton'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div[2]/div[2]/div/div[2]/div[9]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add To Your Collection')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8688b662-ebcc-490c-9fd8-17e643ec1450",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Book added to your collection.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3854fe15-0a04-416a-9165-45e2ee12ff3d",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//div[@id='author-wrapper']//label[@id='userName-value']",
+      "targets": [],
+      "value": "authorBook1"
+    }, {
+      "id": "d13abac1-20da-4db4-b69e-22fdbe5bfb91",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//div[@id='publisher-wrapper']//label[@id='userName-value']",
+      "targets": [],
+      "value": "publisherBook1"
+    }, {
+      "id": "1e2119b5-bd44-456a-be7a-6cf3e7fd0c8f",
+      "comment": "",
+      "command": "click",
+      "target": "id=addNewRecordButton",
+      "targets": [
+        ["id=addNewRecordButton", "id"],
+        ["css=.text-left > #addNewRecordButton", "css:finder"],
+        ["xpath=//button[@id='addNewRecordButton']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div[2]/div[2]/div/div[2]/div[9]/div/button", "xpath:idRelative"],
+        ["xpath=//div[9]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Back To Book Store')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe95c0bc-3fae-4f5a-b2bc-0bd8abce34c4",
+      "comment": "",
+      "command": "store",
+      "target": "Speaking JavaScript",
+      "targets": [],
+      "value": "secondBook"
+    }, {
+      "id": "de3baf78-5cc0-4b55-a527-45eab02b05c1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=${secondBook}",
+      "targets": [
+        ["linkText=Speaking JavaScript", "linkText"],
+        ["css=#see-book-Speaking\\ JavaScript > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Speaking JavaScript')]", "xpath:link"],
+        ["xpath=//span[@id='see-book-Speaking JavaScript']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/books?book=9781449365035')]", "xpath:href"],
+        ["xpath=//div[4]/div/div[2]/div/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Speaking JavaScript')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe170f31-0bf5-4a0a-afc3-b60ff6867927",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@id='addNewRecordButton' and contains(text(),'Add To Your Collection')]",
+      "targets": [
+        ["css=.text-right > #addNewRecordButton", "css:finder"],
+        ["xpath=(//button[@id='addNewRecordButton'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div[2]/div[2]/div/div[2]/div[9]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add To Your Collection')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e449d15c-5d74-4a5c-ad60-c6295d7c7216",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Book added to your collection.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52803e31-dad4-4140-95cd-b6af21a7cddc",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//div[@id='author-wrapper']//label[@id='userName-value']",
+      "targets": [],
+      "value": "authorBook2"
+    }, {
+      "id": "ca5b17b3-2941-48bd-ab6b-157d1c025614",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//div[@id='publisher-wrapper']//label[@id='userName-value']",
+      "targets": [],
+      "value": "publisherBook2"
+    }, {
+      "id": "e86568a3-9607-4ed9-91aa-e725617a6bdb",
+      "comment": "",
+      "command": "open",
+      "target": "https://demoqa.com/profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6db8bbd1-2bfd-4580-b21e-24f8180de7b7",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=${firstBook}",
+      "targets": [
+        ["linkText=Learning JavaScript Design Patterns", "linkText"],
+        ["css=#see-book-Learning\\ JavaScript\\ Design\\ Patterns > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Learning JavaScript Design Patterns')]", "xpath:link"],
+        ["xpath=//span[@id='see-book-Learning JavaScript Design Patterns']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/profile?book=9781449331818')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Learning JavaScript Design Patterns')]", "xpath:innerText"]
+      ],
+      "value": "${firstBook}"
+    }, {
+      "id": "033aa9b6-0f40-4aa7-ac24-bcdab5a1c702",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@class='rt-td' and contains(text(),'${authorBook1}')]",
+      "targets": [
+        ["css=.rt-tr-group:nth-child(1) .rt-td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/div[3]", "xpath:position"]
+      ],
+      "value": "${authorBook1}"
+    }, {
+      "id": "a691f4f6-0845-4d06-8ab4-82c448cef02b",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@class='rt-td' and contains(text(),\"${publisherBook1}\")]",
+      "targets": [
+        ["css=.rt-tr-group:nth-child(1) .rt-td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div/div/div[4]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[4]", "xpath:position"]
+      ],
+      "value": "${publisherBook1}"
+    }, {
+      "id": "64b4a2f5-a94e-47b5-80d7-df51d85114de",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=${secondBook}",
+      "targets": [
+        ["linkText=Speaking JavaScript", "linkText"],
+        ["css=#see-book-Speaking\\ JavaScript > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Speaking JavaScript')]", "xpath:link"],
+        ["xpath=//span[@id='see-book-Speaking JavaScript']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/profile?book=9781449365035')]", "xpath:href"],
+        ["xpath=//div[2]/div/div[2]/div/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Speaking JavaScript')]", "xpath:innerText"]
+      ],
+      "value": "${secondBook}"
+    }, {
+      "id": "f8b884c3-5c2b-49e8-9df9-7f613709a3d0",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@class='rt-td' and contains(text(),'${authorBook2}')]",
+      "targets": [
+        ["css=.rt-tr-group:nth-child(2) .rt-td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div[2]/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]", "xpath:position"]
+      ],
+      "value": "${authorBook2}"
+    }, {
+      "id": "389d596b-69dd-4045-b1d7-03571db42e87",
+      "comment": "",
+      "command": "verifyText",
+      "target": "xpath=//div[@class='rt-td' and contains(text(),\"${publisherBook2}\")]",
+      "targets": [
+        ["css=.rt-tr-group:nth-child(2) .rt-td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div[2]/div/div[4]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[4]", "xpath:position"]
+      ],
+      "value": "${publisherBook2}"
+    }, {
+      "id": "efd3ad52-9362-457f-9ba6-10abf97d4867",
+      "comment": "",
+      "command": "run",
+      "target": "Logout Book Store",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f0dc49bc-a8d9-4422-9595-33de9ece369b",
+    "name": "Login Book Store",
+    "commands": [{
+      "id": "fc2aaa44-2291-4fad-9ea7-58ed013ac386",
+      "comment": "",
+      "command": "open",
+      "target": "https://demoqa.com/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16a08bb2-3787-4aa7-a587-b93d0baad910",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "828x661",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "20311fee-cf9d-4f54-97eb-debe6409a648",
+      "comment": "",
+      "command": "store",
+      "target": "duyphuongfpt",
+      "targets": [],
+      "value": "username"
+    }, {
+      "id": "29ded8d1-403c-4d0e-96cb-614faa5ac60f",
+      "comment": "",
+      "command": "type",
+      "target": "css=#userName",
+      "targets": [
+        ["id=userName", "id"],
+        ["css=#userName", "css:finder"],
+        ["xpath=//input[@id='userName']", "xpath:attributes"],
+        ["xpath=//div[@id='userName-wrapper']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${username}"
+    }, {
+      "id": "61ae552f-047d-4814-9ce3-f74843d1b89d",
+      "comment": "",
+      "command": "store",
+      "target": "Pduyphuong2000!",
+      "targets": [],
+      "value": "password"
+    }, {
+      "id": "f8a287a6-7538-47aa-adb6-729ebebfa292",
+      "comment": "",
+      "command": "type",
+      "target": "css=#password",
+      "targets": [
+        ["id=password", "id"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='password-wrapper']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "${password}"
+    }, {
+      "id": "b11e3d6b-8ee4-42af-acee-529aaf44389d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//button[@id='login']", "xpath:attributes"],
+        ["xpath=//form[@id='userForm']/div[4]/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e204acc-86bc-4000-b848-66810a21fb1e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=#submit",
+      "targets": [],
+      "value": "30000"
+    }]
+  }, {
+    "id": "425c333c-0e82-4e18-a659-81429ee25a1a",
+    "name": "Logout Book Store",
+    "commands": [{
+      "id": "9d81d92e-d621-42d2-9367-bac8c3aab41d",
+      "comment": "",
+      "command": "open",
+      "target": "https://demoqa.com/books",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "590538b9-4641-438a-9eea-a15c03023fe6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "828x661",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "909d2747-75d6-4909-bf2b-fb53ae6d07fe",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//button[@id='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='searchBox-wrapper']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Log out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "338a1551-cca7-484b-9924-4b4d49d525a9",
+    "name": "Delete All Book",
+    "commands": [{
+      "id": "6bdb872c-8dc7-4254-a2c2-940aee2c1b09",
+      "comment": "",
+      "command": "open",
+      "target": "https://demoqa.com/profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48bd3734-f412-49d7-8c8f-519fc84bc762",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@id=\"submit\" and contains(text(),\"Delete All Books\")]",
+      "targets": [
+        ["css=.di > #submit", "css:finder"],
+        ["xpath=(//button[@id='submit'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div[2]/div[2]/div/div[3]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Delete All Books')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6fa3471-95bb-4611-a404-3a21a88e972f",
+      "comment": "",
+      "command": "click",
+      "target": "id=closeSmallModal-ok",
+      "targets": [
+        ["id=closeSmallModal-ok", "id"],
+        ["css=#closeSmallModal-ok", "css:finder"],
+        ["xpath=//button[@id='closeSmallModal-ok']", "xpath:attributes"],
+        ["xpath=//div[5]/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'OK')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f3af95c-fa35-4704-8de6-f4fcb73b5ccc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.stop()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5fdffebc-0c28-43c5-98a5-f388a8a8fceb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return location.reload()",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "08fcecbf-ef9f-499f-b5a9-3c0e26c4d60c",
+    "name": "Scenario 3: Search Book",
+    "commands": [{
+      "id": "fd4832b7-6b7b-459c-9332-fdf59a1b93f9",
+      "comment": "",
+      "command": "open",
+      "target": "https://demoqa.com/books",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f1a58fa-3d88-448e-955c-89f6b161cef2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "832x665",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3b1e5be5-cc92-404b-9563-69de254982b2",
+      "comment": "",
+      "command": "store",
+      "target": "Design",
+      "targets": [],
+      "value": "keywordSearch1"
+    }, {
+      "id": "077f3363-bf97-4547-9c0a-725d82a4e6a4",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchBox",
+      "targets": [
+        ["id=searchBox", "id"],
+        ["css=#searchBox", "css:finder"],
+        ["xpath=//input[@id='searchBox']", "xpath:attributes"],
+        ["xpath=//div[@id='searchBox-wrapper']/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${keywordSearch1}"
+    }, {
+      "id": "63cf4c1d-6c0e-4c66-ad73-c28624565d6d",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//div[@role=\"rowgroup\"]/div/div[2][not(span)]",
+      "targets": [],
+      "value": "countResult1"
+    }, {
+      "id": "a01c6b93-3177-494a-a8a6-9ffd9bf26a1d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "begin"
+    }, {
+      "id": "cd13095f-68cd-4d6b-baa5-bcc5004d7197",
+      "comment": "",
+      "command": "while",
+      "target": "${begin}<=${countResult1}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3a5a6267-0346-472c-b06a-2628e9952c28",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//div[@role=\"rowgroup\"][${begin}]//span[@class=\"mr-2\"]/a",
+      "targets": [],
+      "value": "titleBooks"
+    }, {
+      "id": "a0eefa97-1495-4a91-94b5-f88de84567b7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${keywordSearch1}.toLowerCase()",
+      "targets": [],
+      "value": "lowercaseKeyword"
+    }, {
+      "id": "63785ce8-d777-401c-8366-529185824548",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${titleBooks}.toLowerCase().includes(${lowercaseKeyword})",
+      "targets": [],
+      "value": "compare"
+    }, {
+      "id": "b1457495-8790-4efb-95bb-0d45d9151260",
+      "comment": "",
+      "command": "assert",
+      "target": "compare",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "3d7c7033-c36c-4ef0-b1c5-252bfe4dbcf2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${begin}+1",
+      "targets": [],
+      "value": "begin"
+    }, {
+      "id": "dcf84c80-925b-41b0-9b9d-1798b87c9a36",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8579a3b8-5f3f-46e2-9d2b-343709f2c34e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "begin"
+    }, {
+      "id": "48c83125-b242-4a3c-87d4-dc5c28649a60",
+      "comment": "",
+      "command": "store",
+      "target": "design",
+      "targets": [],
+      "value": "keywordSearch2"
+    }, {
+      "id": "b1273a6e-df95-466d-a648-8c7f4ffa2029",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchBox",
+      "targets": [
+        ["id=searchBox", "id"],
+        ["css=#searchBox", "css:finder"],
+        ["xpath=//input[@id='searchBox']", "xpath:attributes"],
+        ["xpath=//div[@id='searchBox-wrapper']/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${keywordSearch2}"
+    }, {
+      "id": "d0c6c65e-2ddd-4498-9a52-62a0d12a3051",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//div[@role=\"rowgroup\"]/div/div[2][not(span)]",
+      "targets": [],
+      "value": "countResult2"
+    }, {
+      "id": "896aaa22-b28c-4a82-9438-5bfd63e9103e",
+      "comment": "",
+      "command": "while",
+      "target": "${begin}<=${countResult2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c830a10-1bb9-47cb-8133-b446a34b3835",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//div[@role=\"rowgroup\"][${begin}]//span[@class=\"mr-2\"]/a",
+      "targets": [],
+      "value": "titleBooks"
+    }, {
+      "id": "fb4e6c67-74a9-48f2-bc83-0d48dcadfb15",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${keywordSearch2}.toLowerCase()",
+      "targets": [],
+      "value": "lowercaseKeyword"
+    }, {
+      "id": "f1749505-e15e-4078-af29-fa52543d41ff",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${titleBooks}.toLowerCase().includes(${lowercaseKeyword})",
+      "targets": [],
+      "value": "compare"
+    }, {
+      "id": "de71e754-f98d-450b-8059-5813d6540179",
+      "comment": "",
+      "command": "assert",
+      "target": "compare",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "6f52113e-ac9c-475c-a6b1-a8b7913d7ed5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${begin}+1",
+      "targets": [],
+      "value": "begin"
+    }, {
+      "id": "08ac9ec8-7ce0-408a-8a00-d7f6db684bb2",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2d3c20a1-ae09-4f2e-9265-a2de77ae61b4",
+    "name": "Scenario 4: Delete Book",
+    "commands": [{
+      "id": "35e997e1-4573-4156-9149-d017e45d80bb",
+      "comment": "",
+      "command": "run",
+      "target": "Login Book Store",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5681a040-8aab-4ae1-afb7-31f655ac7c7d",
+      "comment": "",
+      "command": "run",
+      "target": "Delete All Book",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28df496d-7a47-4410-9091-69f82c15c76a",
+      "comment": "",
+      "command": "open",
+      "target": "https://demoqa.com/books",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31b0f48b-5e9c-435a-ac22-4be8f2de8233",
+      "comment": "",
+      "command": "store",
+      "target": "Learning JavaScript Design Patterns",
+      "targets": [],
+      "value": "firstBook"
+    }, {
+      "id": "b0eccd8e-9ff0-4bb8-a496-e9673770724e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=${firstBook}",
+      "targets": [
+        ["linkText=Learning JavaScript Design Patterns", "linkText"],
+        ["css=#see-book-Learning\\ JavaScript\\ Design\\ Patterns > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Learning JavaScript Design Patterns')]", "xpath:link"],
+        ["xpath=//span[@id='see-book-Learning JavaScript Design Patterns']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/books?book=9781449331818')]", "xpath:href"],
+        ["xpath=//div[2]/div/div[2]/div/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Learning JavaScript Design Patterns')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdfe8fb7-775b-45f2-9911-511c851c8c23",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@id='addNewRecordButton' and contains(text(),'Add To Your Collection')]",
+      "targets": [
+        ["css=.text-right > #addNewRecordButton", "css:finder"],
+        ["xpath=(//button[@id='addNewRecordButton'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/div[2]/div[2]/div/div[2]/div[9]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add To Your Collection')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec6b921c-366b-429e-ad68-891cacab0cb4",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Book added to your collection.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0b26817-2d91-40a1-9036-ba91fac01b01",
+      "comment": "",
+      "command": "open",
+      "target": "https://demoqa.com/profile",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15e965aa-101e-430e-864d-5cc0d65ccd55",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchBox",
+      "targets": [
+        ["id=searchBox", "id"],
+        ["css=#searchBox", "css:finder"],
+        ["xpath=//input[@id='searchBox']", "xpath:attributes"],
+        ["xpath=//div[@id='books-wrapper']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "412920bb-527a-4d60-9d22-72a6d33aa0c2",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchBox",
+      "targets": [
+        ["id=searchBox", "id"],
+        ["css=#searchBox", "css:finder"],
+        ["xpath=//input[@id='searchBox']", "xpath:attributes"],
+        ["xpath=//div[@id='books-wrapper']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${firstBook}"
+    }, {
+      "id": "0c2447df-0162-496a-a50b-0beaa6437d75",
+      "comment": "",
+      "command": "click",
+      "target": "id=basic-addon2",
+      "targets": [
+        ["id=basic-addon2", "id"],
+        ["css=#basic-addon2", "css:finder"],
+        ["xpath=//span[@id='basic-addon2']", "xpath:attributes"],
+        ["xpath=//div[@id='books-wrapper']/div[2]/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "71baf575-c9c2-4152-a563-7fa2ce8b7023",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[@title=\"Delete\"]",
+      "targets": [
+        ["css=#delete-record-undefined path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "78dbbd0d-bf13-443b-90e9-7179f02f60c8",
+      "comment": "",
+      "command": "click",
+      "target": "id=closeSmallModal-ok",
+      "targets": [
+        ["id=closeSmallModal-ok", "id"],
+        ["css=#closeSmallModal-ok", "css:finder"],
+        ["xpath=//button[@id='closeSmallModal-ok']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div/div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'OK')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc578471-6678-436c-a4f8-cbdcb1aa9fd5",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Book deleted.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "231aae83-4fd9-4d4c-b828-107d92257e7b",
+      "comment": "",
+      "command": "run",
+      "target": "Logout Book Store",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d6f8ca5b-e70d-4451-87a0-6698069d24fe",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["832dc51e-e0fe-4f53-ab65-71a5c2ba66d7"]
+  }],
+  "urls": ["https://demoqa.com/"],
+  "plugins": []
+}
